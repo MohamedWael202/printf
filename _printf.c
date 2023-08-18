@@ -1,5 +1,5 @@
 #include "main.h"
-void print_buffer(char buffer[], int *buff_ind)
+void print_buffer(char buffer[], int *buff_ind);
 /**
 * _printf - ff
 * @format: ss
@@ -37,7 +37,7 @@ for (i = 0; format && format[i] != '\0'; i++)
 		printed = handle_print(format, &i, list, buffer,
 		flags, width, precision, size);
 		if (printed == -1)
-			return (-1)'
+			return (-1);
 		printed_chars += printed;
 	}
 }
@@ -53,8 +53,8 @@ return (printed_chars);
 * @buff_ind: hh
 */
 void print_buffer(char buffer[], int *buff_ind)
-{
-	if (*buff_ind > 0)
-		write(1, &buffer[0], *buff_ind);
-	*buff_ind = 0;
-}
+	{
+		if (*buff_ind > 0)
+			write(1, &buffer[0], *buff_ind);
+		*buff_ind = 0;
+	}
